@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDom from 'react-dom/client';
 
+import { Header, Footer, Menu } from './components';
+
 const pizzaData = [
   {
     name: "Focaccia",
@@ -49,20 +51,9 @@ const pizzaData = [
 function App() {
   return (
     <>
-      <h1>Hello React!</h1>
-      <Pizza />
-      <Pizza />
-      <Pizza />
-    </>
-  );
-}
-
-function Pizza() {
-  return (
-    <>
-      <img src='pizzas/spinaci.jpg' alt='Pizza Spinaci' />
-      <h2>Pizza Spinaci</h2>
-      <p>Tomato, mozarella, spinach, and ricotta cheese</p>
+      <Header />
+      <Menu />
+      <Footer />
     </>
   );
 }
