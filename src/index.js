@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom/client';
+import './index.css';
 
 import { Header, Footer, Menu } from './components';
 
@@ -50,11 +51,11 @@ const pizzaData = [
 
 function App() {
   return (
-    <>
+    <div className='container'>
       <Header />
-      <Menu />
+      <Menu menu={pizzaData} />
       <Footer />
-    </>
+    </div>
   );
 }
 
