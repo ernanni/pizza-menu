@@ -12,7 +12,12 @@ const Footer = () => {
             <p>
               We're open until {closeHour}:00. Come visit us or order online.
             </p>
-            <button className="btn">Order</button>
+            <button
+              className="btn"
+              onClick={() => alert("We're still working on it")}
+            >
+              Order
+            </button>
           </>
         ) : (
           <p>We're closed.</p>
