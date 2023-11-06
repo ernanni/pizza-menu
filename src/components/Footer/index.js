@@ -3,8 +3,23 @@ const Footer = () => {
   const openHour = 12;
   const closeHour = 22;
 
-  const isOpen = hour >= openHour && hour <= closeHour;
-  return <footer className="footer" >{isOpen ? "We're currently open." : "We're closed"}</footer>;
+  const isOpen = hour >= openHour && hour < closeHour;
+  return (
+    <footer className="footer">
+      <div className="order">
+        {isOpen ? (
+          <>
+            <p>
+              We're open until {closeHour}:00. Come visit us or order online.
+            </p>
+            <button className="btn">Order</button>
+          </>
+        ) : (
+          <p>We're closed.</p>
+        )}
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
